@@ -3,7 +3,7 @@
 
 | No | Nama | NIM | Akun GitHub |
 |----|------|-----|-------------|
-| 1 | Dhia Mirza Handhiono | 2631407001111043 | [@dhiamirza27-arch](https://github.com/dhiamirza27-arch) |
+| 1 | Dhia Mirza Handhiono | 2631407001111043 | [@Mirzuw27](https://github.com/Mirzuw27) |
 | 2 | Melviano Putra Anugrah | 2631407001111051 | [@Epin21](https://github.com/Epin21) |
 | 3 | Ahmad Faris Abdurrasyid | 2631407001111055 | [@raysheet](https://github.com/raysheet) |
 
