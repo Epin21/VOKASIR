@@ -1,0 +1,102 @@
+import * as readline from "readline";
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+interface Barang {
+    idBarang: string;
+    namaBarang: string;
+    harga: number;
+    stok: number;
+    tersedia: boolean;
+}
+
+let daftarBarang: Barang[] = [
+    {
+        idBarang: "BRG001",
+        namaBarang: "Nasi Goreng",
+        harga: 15000,
+        stok: 20,
+        tersedia: true
+    },
+    {
+        idBarang: "BRG002",
+        namaBarang: "Es Teh",
+        harga: 5000,
+        stok: 30,
+        tersedia: true
+    }
+];
+
+function tambahMenu(): void {
+    console.log("\n=== TAMBAH MENU BARU ===");
+
+    rl.question("Masukkan ID Barang: ", (id) => {
+        // Memeriksa ID barang
+        const cekID = daftarBarang.some(
+            (barang) => barang.idBarang === id
+        );
+
+        if (cekID) {
+            console.log("ID barang sudah digunakan!");
+            tampilkanMenu();
+            return;
+        }
+
+        rl.question("Nama Menu: ", (nama) => {
+            rl.question("Harga Menu: ", (hargaInput) => {
+                rl.question("Jumlah Stok: ", (stokInput) => {
+
+                    const harga = Number(hargaInput);
+                    const stok = Number(stokInput);
+
+                    if (
+                        nama.trim() === "" ||
+                        !Number.isFinite(harga) ||
+                        !Number.isFinite(stok) ||
+                        harga <= 0 ||
+                        stok < 0
+                    ) {
+                        console.log("Input tidak valid!");
+                        tampilkanMenu();
+                        return;
+                    }
+
+                    const barangBaru: Barang = {
+                        idBarang: id,
+                        namaBarang: nama,
+                        harga: harga,
+                        stok: stok,
+                        tersedia: stok > 0
+                    };
+
+                    daftarBarang.push(barangBaru);
+
+                    console.log("\nMenu berhasil ditambahkan!");
+                    console.log(barangBaru);
+
+                    tampilkanMenu();
+                });
+            });
+        });
+    });
+}
+
+function tampilkanMenu(): void {
+    console.log("\n=== DAFTAR MENU VOKASIR ===");
+
+    daftarBarang.forEach((barang) => {
+        console.log("--------------------------");
+        console.log("ID      :", barang.idBarang);
+        console.log("Nama    :", barang.namaBarang);
+        console.log("Harga   :", barang.harga);
+        console.log("Stok    :", barang.stok);
+        console.log("Status  :", barang.tersedia ? "Tersedia" : "Habis");
+    });
+
+    rl.close();
+}
+
+tambahMenu();
