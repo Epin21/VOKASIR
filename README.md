@@ -11,6 +11,6 @@
 
 | Nama | Akun GitHub | Fitur / Bagian Kode yang Dikerjakan | Link Pull Request Utama |
 |------|-------------|---------------------------------------|---------------------------|
-| Dhia Mirza Handhiono | @Mirzuw27| Menu utama Vokasir (loop & navigasi switch), fitur READ (daftar semua menu & detail menu by ID beserta harga setelah pajak), flowchart (Bab II) | - |
-| Melviano Putra Anugrah | @Epin21 | Setup repo, struktur data menu kantin (id, nama, kategori, harga, stok, status tersedia), data awal menu, fungsi validasi harga & stok, fitur CREATE (tambah menu baru), README & dokumentasi | - |
-| Ahmad Faris Abdurrasyid | @raysheet | Fungsi tampilan, fitur READ (semua data, detail per ID, ringkasan) dan fitur UPDATE | - |
+| Dhia Mirza Handhiono | @Mirzuw27| Menu utama Vokasir (loop & navigasi switch), fitur READ (daftar semua menu & detail menu by ID beserta harga setelah pajak), flowchart (Bab II) | 4 |
+| Melviano Putra Anugrah | @Epin21 | Setup repo, struktur data menu kantin (id, nama, kategori, harga, stok, status tersedia), data awal menu, fungsi validasi harga & stok, fitur CREATE (tambah menu baru), README & dokumentasi | 2 |
+| Ahmad Faris Abdurrasyid | @raysheet | Fungsi tampilan, fitur READ (semua data, detail per ID, ringkasan) dan fitur UPDATE | 3 |
